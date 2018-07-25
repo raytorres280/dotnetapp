@@ -6,6 +6,7 @@ namespace dotnetapp.ServiceModel
     [Route("/hello/GetHello")]
     public class Hello : IReturn<HelloResponse>
     {
+        [ApiMember(IsRequired = false, DataType = "string", ParameterType = "body", Description = "The Name for the hello message.")]
         public string Name { get; set; }
         public Hello()
         {
@@ -19,7 +20,7 @@ namespace dotnetapp.ServiceModel
         public string Test { get; set; }
         public HelloTest()
         {
-            this.Test = "testing the service models";
+            this.Test = "testing the service models"; 
         }
     }
 

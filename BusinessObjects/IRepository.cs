@@ -6,15 +6,14 @@ namespace dotnetapp.ServiceInterface
 {
     public interface IRepository<TEntitiy> where TEntitiy : class
     {
-        TEntitiy Get()
         IEnumerable<TEntitiy> GetAll();
-        IEnumerable<TEntitiy> Find(Expression<Func<TEntitiy, bool>> predicate)
+        //IEnumerable<TEntitiy> Find(Expression<Func<TEntitiy, bool>> predicate);
+        //TEntity GetById(string id);
+        //void Add(TEntitiy entity);
+        //void AddRange(IEnumerable<TEntitiy> entities);
 
-        void Add(TEntitiy entity);
-        void AddRange(IEnumerable<TEntitiy> entities);
-
-        void Remove(TEntitiy entity);
-        void RemoveRange(IEnumerable<TEntitiy> entities);
+        //void Remove(TEntitiy entity);
+        //void RemoveRange(IEnumerable<TEntitiy> entities);
     }
 
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
@@ -31,10 +30,10 @@ namespace dotnetapp.ServiceInterface
             return db.Select<TEntity>();
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<T, bool>> exp)
-        {
-            return db.Select<TEntity>(exp);
-        }
+        //public IEnumerable<TEntity> Find(Expression<Func<T, bool>> exp)
+        //{
+        //    return db.Select<TEntity>(exp);
+        //}
 
         public TEntity GetById(string id)
         {

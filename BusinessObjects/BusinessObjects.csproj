@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="INoticeRecordRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pocos\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.OrmLite.Core" Version="5.1.1" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL.Core" Version="5.1.1" />
+  </ItemGroup>
 </Project>

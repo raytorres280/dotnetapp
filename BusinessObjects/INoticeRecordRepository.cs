@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using dotnetapp.ServiceModel;
 
 namespace dotnetapp.ServiceInterface
 {

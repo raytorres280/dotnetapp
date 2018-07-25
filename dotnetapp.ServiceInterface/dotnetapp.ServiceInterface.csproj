@@ -12,4 +12,7 @@
     <ProjectReference Include="..\dotnetapp.ServiceModel\dotnetapp.ServiceModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="EmptyClass.cs" />
+  </ItemGroup>
 </Project>

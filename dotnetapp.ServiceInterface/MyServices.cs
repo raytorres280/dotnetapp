@@ -26,16 +26,21 @@ namespace dotnetapp.ServiceInterface
             return new HelloResponse { Result = $"Hello, {request.Name}!" };
         }
 
-        //public HelloResponse Get(HelloTest request)
-        //{
-        //    Console.WriteLine("other route is working..");
-        //    return new HelloResponse { Result = request.Test };
-        //}
+        public HelloResponse Get(HelloTest request)
+        {
+            Console.WriteLine("other route is working..");
+            return new HelloResponse { Result = request.Test };
+        }
 
         public object Post(CreateHello request)
         {
             Console.WriteLine("made it thru, is it json?");
             return new HelloResponse { Result = "post result string" };
+        }
+
+        public object Any(NoticeRecord request)
+        {
+            return new NoticeRecordResponse { Result =  "some result" };
         }
     }
 }

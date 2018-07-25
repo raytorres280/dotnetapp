@@ -7,15 +7,20 @@
   <ItemGroup>
     <PackageReference Include="ServiceStack.Interfaces" Version="5.*" />
     <PackageReference Include="ServiceStack.OrmLite" Version="5.1.1" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL" Version="5.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Types\" />
-    <Folder Include="repos\" />
-    <Folder Include="Pocos\" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="pocos\EmptyClass.cs" />
+    <Compile Remove="repos\ConnectionFactory.cs" />
+    <Compile Remove="repos\NoticeRecordRepo.cs" />
+    <Compile Remove="Repository.cs" />
+    <Compile Remove="Pocos\EmptyClass.cs" />
+    <Compile Remove="Pocos\Hello.cs" />
+    <Compile Remove="Pocos\NoticeRecord.cs" />
   </ItemGroup>
 </Project>
